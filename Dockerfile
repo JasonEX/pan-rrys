@@ -1,8 +1,8 @@
 FROM alpine:latest
 
 ARG GLIBC_VERSION='2.30-r0'
-ENV GID 33
-ENV UID 33
+ENV GID 65534
+ENV UID 65534
 
 RUN apk --no-cache add shadow libstdc++ \
     && wget -O /etc/apk/keys/sgerrand.rsa.pub https://alpine-pkgs.sgerrand.com/sgerrand.rsa.pub \
