@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  rrys:
+    build:
+      context: .
+      args:
+        GLIBC_VERSION: 2.30-r0
+    environment:
+      GID: 33
+      UID: 33
+    ports:
+      - "6802:3001"
+    volumes:
+      - /tmp/filerun/user-files:/rrys/downloads
